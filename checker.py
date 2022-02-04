@@ -71,7 +71,7 @@ if __name__ == "__main__":
     proxies = proxies + proxyserver.server17_list()
     proxies = proxies + proxyserver.server18_list()
     #proxies = proxies + proxyserver.server19_list()
-    #proxies = proxies + proxyserver.server20_list()
+    proxies = proxies + proxyserver.server20_list()
 
     #proxies = open('HTTP-proxies.txt', 'r').read().splitlines()
     #proxies = proxies + open('SOCKS4-proxies.txt', 'r').read().splitlines()
@@ -96,3 +96,7 @@ if __name__ == "__main__":
     for l in m:
         thread = Thread(target=check_proxy_list, args=(l, url, path))
         thread.start()
+        
+    thread = Thread(target=print_status)
+    thread.start()
+    
