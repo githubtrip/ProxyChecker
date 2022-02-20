@@ -77,7 +77,7 @@ if __name__ == "__main__":
     #proxies = proxies + open('SOCKS4-proxies.txt', 'r').read().splitlines()
     #proxies = proxies + open('SOCKS5-proxies.txt', 'r').read().splitlines()
     
-    threads = 300
+    threads = 1000
 
     print(f"total proxies: {len(proxies)} | threads: {threads}")
     time.sleep(2)
